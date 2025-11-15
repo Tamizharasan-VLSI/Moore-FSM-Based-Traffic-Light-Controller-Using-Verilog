@@ -35,6 +35,16 @@ Both **RTL design** and **testbench** are included, along with waveform generati
 | s5    | S Yellow | 3 cycles | ----> again s0
 ---
 
+## 📝 RTL Design Notes
+
+- **Counter Initialization**:  
+
+```verilog
+if(rst) begin
+    current_state <= s0;
+    count <= -1; // ensures first state lasts full cycle
+end
+
 ## 📁 Repository Contents
 | File | Description |
 |------|-------------|
