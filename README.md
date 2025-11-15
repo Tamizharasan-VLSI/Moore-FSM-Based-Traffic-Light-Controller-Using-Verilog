@@ -39,12 +39,12 @@ Both **RTL design** and **testbench** are included, along with waveform generati
 
 - **Counter Initialization**:  
 
-```verilog```
-```if(rst) begin```
-  ```  current_state <= s0;```
-    ```count <= -1; // ensures first state lasts full cycle```
-```end ```
-
+```verilog
+if(rst) begin
+  current_state <= s0;
+    count <= -1; // ensures first state lasts full cycle
+end 
+```
 Explanation:
 
 - After an asynchronous reset, the FSM starts in state s0.
