@@ -47,12 +47,12 @@ end
 
 Explanation:
 
-After an asynchronous reset, the FSM starts in state s0.
-The counter count controls the duration of each state by incrementing every clock cycle.
-If we initialize count = 0 after reset, the first cycle of s0 effectively gets skipped in the simulation output so in monitor at #20 we would see count = 1 not 0 .
-By initializing count = -1, the first positive clock edge brings count to 0, so the full duration of s0 is observed correctly.
-This ensures the FSM timing for the first state is consistent with the rest of the states, without affecting subsequent state durations.
-Reset Output: All traffic lights are OFF (000) when reset is high.
+- After an asynchronous reset, the FSM starts in state s0.
+- The counter count controls the duration of each state by incrementing every clock cycle.
+- If we initialize count = 0 after reset, the first cycle of s0 effectively gets skipped in the simulation output so in monitor at #20 we would see count = 1 not 0 .
+- By initializing count = -1, the first positive clock edge brings count to 0, so the full duration of s0 is observed correctly.
+- This ensures the FSM timing for the first state is consistent with the rest of the states, without affecting subsequent state durations.
+- Reset Output: All traffic lights are OFF (000) when reset is high.
 
 ## 📁 Repository Contents
 | File | Description |
